@@ -1,3 +1,6 @@
+<?php include("path.php"); 
+      error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,46 +12,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Font awesome ikone-->
   <script src="https://kit.fontawesome.com/427140a3b4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <!--Navigacija-->
-    <nav class="navbar navbar-expand-md navbar-light bg-light shadow">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="logo.png" alt="" width="60" height="60" class="d-inline-block align-text-center">
-            Udruga LePas
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-         <ul class="navbar-nav">
-           <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Početna</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stranice/udomi.html">Udomi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stranice/onama.html">O nama</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stranice/novosti.html">Novosti</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stranice/donacije.html">Donacije</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stranice/kontakti.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>  
-    </nav>
-  </header>
+  <!--Header-->
+  <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
   <!--Carousel-->
   <div class="container-fluid p-0">
@@ -57,10 +26,10 @@
       <div class="carousel-item active" data-bs-interval="100000">
         <a href="https://bootstrapcreative.com/">
           <picture>
-           <source srcset="carousel-image-1/1.png" media="(min-width: 1400px)">
-           <source srcset="carousel-image-1/2.png" media="(min-width: 769px)">
-           <source srcset="carousel-image-1/3.png" media="(min-width: 577px)">
-           <img srcset="carousel-image-1/4.png" alt="responsive image" class="d-block img-fluid">
+           <source srcset="assets/images/carousel-image-1/1.png" media="(min-width: 1400px)">
+           <source srcset="assets/images/carousel-image-1/2.png" media="(min-width: 769px)">
+           <source srcset="assets/images/carousel-image-1/3.png" media="(min-width: 577px)">
+           <img srcset="assets/images/carousel-image-1/4.png" alt="responsive image" class="d-block img-fluid">
          </picture>
          <div class="carousel-caption justify-content-center align-items-center">
              <div>
@@ -74,10 +43,10 @@
       <div class="carousel-item">
         <a href="https://bootstrapcreative.com/">
           <picture>
-           <source srcset="carousel-image-2/1.png" media="(min-width: 1400px)">
-           <source srcset="carousel-image-2/2.png" media="(min-width: 769px)">
-           <source srcset="carousel-image-2/3.png" media="(min-width: 577px)">
-           <img srcset="carousel-image-2/4.png" alt="responsive image" class="d-block img-fluid">
+           <source srcset="assets/images/carousel-image-2/1.png" media="(min-width: 1400px)">
+           <source srcset="assets/images/carousel-image-2/2.png" media="(min-width: 769px)">
+           <source srcset="assets/images/carousel-image-2/3.png" media="(min-width: 577px)">
+           <img srcset="assets/images/carousel-image-2/4.png" alt="responsive image" class="d-block img-fluid">
          </picture>
          <div class="carousel-caption justify-content-center align-items-center">
              <div>
@@ -91,10 +60,10 @@
       <div class="carousel-item">
         <a href="https://bootstrapcreative.com/">
           <picture>
-           <source srcset="carousel-image-3/1.png" media="(min-width: 1400px)">
-           <source srcset="carousel-image-3/2.png" media="(min-width: 769px)">
-           <source srcset="carousel-image-3/3.png" media="(min-width: 577px)">
-           <img srcset="carousel-image-3/4.png" alt="responsive image" class="d-block img-fluid">
+           <source srcset="assets/images/carousel-image-3/1.png" media="(min-width: 1400px)">
+           <source srcset="assets/images/carousel-image-3/2.png" media="(min-width: 769px)">
+           <source srcset="assets/images/carousel-image-3/3.png" media="(min-width: 577px)">
+           <img srcset="assets/images/carousel-image-3/4.png" alt="responsive image" class="d-block img-fluid">
          </picture>
          <div class="carousel-caption justify-content-center align-items-center">
              <div>
@@ -270,43 +239,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center text-black">
-    <div class="container p-3 mt-3">
-      <div class="row">
-        <div class="col">
-        <a href="#" id="footer-btn">
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-facebook-f fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="#" id="footer-btn">  
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-        <a href="#" id="footer-btn">  
-          <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-google fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-        </div>  
-      </div>
-      <div class="m-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
-        </p>
-      </div>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-black" href="https://mdbootstrap.com/">LePas.com</a>
-    </div>
-  </footer>
+  <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 
   <!--Separate Popper i Bootstrap JS-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
