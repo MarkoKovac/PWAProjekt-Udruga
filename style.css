@@ -1,0 +1,37 @@
+.navbar-toggler:focus{
+    box-shadow: inherit;   
+}
+.card-link{
+    color: black;
+    text-decoration: none;
+}
+.card-link:hover{
+    color: rgb(204, 123, 123);
+}
+
+#count1, #count2, #count3{
+    font-size: 50px;
+}
+
+.accordion-button:not(.collapsed){
+    border: 1px solid rgb(224, 141, 155,.25);
+    background:rgb(240, 174, 174);
+    color: #ffffff;
+    font-size: large;
+}
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(100%);
+}
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+footer{
+    background-color: rgb(202, 202, 202);
+}
+#footer-btn{
+    text-decoration: none;
+    color: rgb(233, 145, 145);
+}
+#footer-btn:hover{
+    color: rgb(238, 122, 122);
+}
