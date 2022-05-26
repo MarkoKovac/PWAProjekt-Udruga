@@ -118,13 +118,13 @@
         <h2 class="text-center">Udomi</h2>
         <div class="col-5 text-center">
           <a href="#">
-            <img src="https://via.placeholder.com/300x300" alt="" class="rounded-circle w-100">
+            <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-100">
             <p>Udomi peseka</p>
           </a>
         </div>
         <div class="col-5 text-center">
           <a href="#">
-            <img src="https://via.placeholder.com/300x300" alt="" class="rounded-circle w-100">
+            <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-100">
             <p>Udomi macu</p>
           </a>
         </div>

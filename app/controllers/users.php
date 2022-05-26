@@ -25,32 +25,28 @@ function loginUser($user) {
     exit();
 }
 
-// if(isset($_POST['login-btn'])){
-//     unset($_POST['login-btn'], $_POST['passwordConf']);
-//     $_POST['admin'] = 1;
-//     $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+//  if(isset($_POST['login-btn'])){
+//      unset($_POST['login-btn'], $_POST['passwordConf']);
+//      $_POST['admin'] = 1;
+//      $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+//      $user_id = create('users',$_POST);
+//      $user = selectOne('users',['id' => $user_id]);
+//      dd($user);
+//  }
 
-//     $user_id = create('users',$_POST);
-//     $user = selectOne('users',['id' => $user_id]);
-
-//     dd($user);
-// }
-
- if(isset($_POST['login-btn'])){
-     $errors = validateLogin($_POST);
-     if (count($errors) === 0) {
-         $user = selectOne($table,['username' => $_POST['username']]);
-         if($user && password_verify($_POST['password'], $user['password'])) {
-            loginUser($user); 
-         }
-         else {
-             array_push($errors, 'Wrong credentials');
-         }
-     }
-
-     $username = $_POST['username'];
-     $password = $_POST['password'];
-
- }
-
+  if(isset($_POST['login-btn'])){
+      $errors = validateLogin($_POST);
+      if (count($errors) === 0) {
+          $user = selectOne($table,['username' => $_POST['username']]);
+          if($user && password_verify($_POST['password'], $user['password'])) {
+             loginUser($user); 
+          }
+          else {
+              array_push($errors, 'Wrong credentials');
+          }
+      
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+    }
+  }
 ?>
