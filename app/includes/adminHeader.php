@@ -1,11 +1,11 @@
 <header class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 p-4" href="#">LePas Udruga za zastitu životinja</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <a class="navbar-brand p-3" href="<?php echo BASE_URL . '/index.php'?>">
+    <img src="../../assets/images/logo.png" alt="" width="60" height="60" class="d-inline-block align-text-center">
+    Udruga LePas
+  </a>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="../index.php">Sign out</a>
+      <a class="nav-link px-3" href="../../index.php">Sign out</a>
     </div>
   </div>
 </header>

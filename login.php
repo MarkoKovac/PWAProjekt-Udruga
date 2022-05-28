@@ -21,9 +21,9 @@
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
-    <div class="container" style="height: 700px;">
-        <div class="row d-flex justify-content-center justify-content-center h-100">
-            <div class="col-10 col-md-4 my-auto">
+    <div class="container" style="height: 500px;">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-10 col-md-4">
 
         <form action="login.php" method="POST">
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
