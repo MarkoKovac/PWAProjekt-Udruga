@@ -1,4 +1,5 @@
 <?php include("../../path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/posts.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
   <title>Admin - Životinje</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Font awesome ikone-->
-  <script src="https://kit.fontawesome.com/427140a3b4.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1c5108fa97.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/admin.css">
   <script src="assets/js/script.js" defer></script>
@@ -18,11 +19,11 @@
 
 <body>
   <!--Header-->
-  <?php include(ROOT_PATH . "/../../app/includes/adminHeader.php"); ?>
+  <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
   <div class="container-fluid">
     <div class="row">
       <!--SideBar-->
-      <?php include(ROOT_PATH . "/../../app/includes/adminSidebar.php"); ?>
+      <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
           <a href="index.php" class="btn btn-success" role="button">Lista životinja</a>
@@ -44,38 +45,6 @@
                 <td>1,001</td>
                 <td>random</td>
                 <td>data</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
                 <td>edit</td>
                 <td>delete</td>
                 <td>publish</td>

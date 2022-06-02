@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS -->   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Font awesome ikone-->
-  <script src="https://kit.fontawesome.com/427140a3b4.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1c5108fa97.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -108,52 +108,7 @@
                                   </div>
                               </div>
                             </div>
-                          </fieldset>
-                          <hr>
-                          <fieldset class="form-group">
-                            <div class="row">
-                              <legend class="col-form-label col-sm-2 pt-0">Aktivnost</legend>
-                              <div class="col-sm-10">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios1" value="option1">
-                                  <label class="form-check-label" for="gridRadios1">
-                                   Aktivni
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios2" value="option2">
-                                  <label class="form-check-label" for="gridRadios2">
-                                    Manje aktivni
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios2" value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
-                                    Plahi
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios3" id="gridRadios2" value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
-                                    Socializirani
-                                    </label>
-                                </div>
-                              </div>
-                            </div>
-                          </fieldset>
-                          <hr>
-                          <div class="form-check">
-                            <label class="form-check-label" for="check1">Cijepljen</label>
-                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label" for="check1">Cipiran</label>
-                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-                        </div> 
-                        <div class="form-check">
-                            <label class="form-check-label" for="check1">Kastriran</label>
-                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-                        </div>               
+                          </fieldset>            
                     </form>        
                 </div>
                 <div class="modal-footer">

@@ -1,4 +1,5 @@
 <?php include("../../path.php");?>
+<?php include(ROOT_PATH . "/app/controllers/posts.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
   <title>Admin - Članci</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Font awesome ikone-->
-  <script src="https://kit.fontawesome.com/427140a3b4.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1c5108fa97.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/admin.css">
   <script src="assets/js/script.js" defer></script>
@@ -18,12 +19,12 @@
 
 <body>
 
-  <?php include(ROOT_PATH . "/../../app/includes/adminHeader.php"); ?>
+  <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
 
   <div class="container-fluid">
     <div class="row">
 
-      <?php include(ROOT_PATH . "/../../app/includes/adminSidebar.php"); ?>
+      <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -31,6 +32,9 @@
           <a href="create.php" class="btn btn-primary" role="button">Dodaj članak</a>
         </div>
         <h2>Lista svih članaka</h2>
+
+        <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
+
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
@@ -42,46 +46,20 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($posts as $key => $post):?>
               <tr>
-                <td>1,001</td>
-                <td>random</td>
+                <td><?php echo $key + 1; ?></td>
+                <td><?php echo $post['title'] ?></td>
                 <td>data</td>
                 <td>edit</td>
                 <td>delete</td>
-                <td>publish</td>
+                <?php if ($post['published']): ?>
+                  <td><a href="" class="unpublish">unpublish</a></td>
+                <?php else:?>
+                <td><a href="" class="publish">publish</a></td>
+                <?php endif; ?>
               </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>

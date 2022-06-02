@@ -4,7 +4,7 @@
         <div class="col">
         <a href="#" id="footer-btn">
           <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
             <i class="fa fa-facebook-f fa-stack-1x fa-inverse"></i>
           </span>
         </a>
