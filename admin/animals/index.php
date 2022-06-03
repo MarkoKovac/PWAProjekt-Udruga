@@ -1,5 +1,5 @@
 <?php include("../../path.php"); ?>
-<?php include(ROOT_PATH . "/app/controllers/posts.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/animals.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,26 +18,30 @@
 </head>
 
 <body>
-  <!--Header-->
+    <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
+
   <div class="container-fluid">
     <div class="row">
       <!--SideBar-->
       <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
+
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
           <a href="index.php" class="btn btn-success" role="button">Lista životinja</a>
           <a href="create.php" class="btn btn-primary" role="button">Dodaj životinju</a>
         </div>
         <h2>Lista svih životinja</h2>
+
+        <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
+
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
               <tr>
-              <th scope="col">Number</th>
-                <th scope="col">Title</th>
-                <th scope="col">Author</th>
-                <th scope="col">Action</th>
+              <th scope="col">Broj</th>
+                <th scope="col">Naziv</th>
+                <th scope="col">Akcija</th>
               </tr>
             </thead>
             <tbody>

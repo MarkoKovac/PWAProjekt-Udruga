@@ -1,4 +1,5 @@
 <?php include("../../path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/animals.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,16 +20,22 @@
 <body>
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
+
   <div class="container-fluid">
     <div class="row">
       <!--SideBar-->
       <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
+
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
           <a href="index.php" class="btn btn-success" role="button">Lista životinja</a>
           <a href="create.php" class="btn btn-primary" role="button">Dodaj životinju</a>
         </div>
         <h2>Dodaj novu životinju</h2>
+
+        <?php include(ROOT_PATH . '/app/helpers/formErrors.php') ?>
+
+        <!--Forma-->
         <form action="">
           <div class="row d-flex justify-content-center">
             <div class="col-md-9">
@@ -98,6 +105,15 @@
                     Veliki
                   </label>
                 </div>
+                <hr>
+                <?php if (empty($published)): ?>
+                <label for="published">Published</label>
+                <input type="checkbox" name="published"><br>
+                <?php else: ?>
+                <label for="published">Published</label>
+                <input type="checkbox" name="published" checked><br>
+                <?php endif;?>
+
                 <fieldset class="form-group">
                   <button type="submit" class="btn btn-primary my-4">Dodaj članak</button>
                 </fieldset>

@@ -20,10 +20,12 @@
 <body>
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
+
   <div class="container-fluid">
     <div class="row">
       <!--SideBar-->
       <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
+      
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
           <a href="index.php" class="btn btn-success" role="button">Lista članaka</a>

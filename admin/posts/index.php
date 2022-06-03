@@ -18,12 +18,12 @@
 </head>
 
 <body>
-
+  <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
 
   <div class="container-fluid">
     <div class="row">
-
+      <!--SideBar-->
       <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -39,10 +39,9 @@
           <table class="table table-striped table-sm">
             <thead>
               <tr>
-                <th scope="col">Number</th>
-                <th scope="col">Title</th>
-                <th scope="col">Author</th>
-                <th scope="col">Action</th>
+                <th scope="col">Broj</th>
+                <th scope="col">Naslov</th>
+                <th scope="col">Akcija</th>
               </tr>
             </thead>
             <tbody>
@@ -50,7 +49,6 @@
               <tr>
                 <td><?php echo $key + 1; ?></td>
                 <td><?php echo $post['title'] ?></td>
-                <td><?php echo $post['user_id'] ?></td>
                 <td><a href="edit.php?id=<?php echo $post['id'];?>">edit</a></td>
                 <td><a href="edit.php?delete_id=<?php echo $post['id'];?>">delete</a></td>
                 <?php if ($post['published']): ?>
