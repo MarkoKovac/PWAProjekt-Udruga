@@ -1,5 +1,5 @@
-<?php include("../../path.php");
-?>
+<?php include("../../path.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/posts.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,11 +19,11 @@
 
 <body>
   <!--Header-->
-  <?php include(ROOT_PATH . "/../../app/includes/adminHeader.php"); ?>
+  <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
   <div class="container-fluid">
     <div class="row">
       <!--SideBar-->
-      <?php include(ROOT_PATH . "/../../app/includes/adminSidebar.php"); ?>
+      <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
           <a href="index.php" class="btn btn-success" role="button">Lista članaka</a>
@@ -31,8 +31,34 @@
         </div>
         <h2>Uredi članak</h2>
 
-        <!--Forma-->
+        <?php include(ROOT_PATH . '/app/helpers/formErrors.php') ?>
 
+        <!--Forma-->
+        <form action="edit.php" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<?php echo $id ?>"><br>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-9">
+              <label for="title" class="form-label">Naslov:</label><br>
+              <input type="text" id="title" name="title" class="form-control" value="<?php echo $title ?>"><br>
+
+              <label for="body" class="form-label">Text:</label><br>
+              <textarea name="body" id="body" rows="10" cols="30" class="form-control"><?php echo $body ?></textarea><br>
+
+              <label for="myfile" class="form-label">Dodajte slike:</label><br>
+              <input type="file" id="myfile" name="image" class="form-control"><br>
+
+              <?php if (empty($published) && $published == 0) : ?>
+                <label for="published">Published</label>
+                <input type="checkbox" name="published"><br>
+              <?php else : ?>
+                <label for="published">Published</label>
+                <input type="checkbox" name="published" checked><br>
+              <?php endif; ?>
+
+              <button name="update-post" type="submit" class="btn btn-primary my-3">Uredi članak</button>
+            </div>
+          </div>
+        </form>
       </main>
     </div>
   </div>
@@ -41,4 +67,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

@@ -39,11 +39,13 @@
             <div class="col-md-9">
               <label for="title" class="form-label">Naslov:</label><br>
               <input type="text" id="title" name="title" class="form-control" value="<?php echo $title ?>"><br>
+
               <label for="body" class="form-label">Text:</label><br>
               <textarea name="body" id="body" rows="10" cols="30" class="form-control"><?php echo $body ?></textarea><br>
 
               <label for="myfile" class="form-label">Dodajte slike:</label><br>
               <input type="file" id="myfile" name="image" class="form-control"><br>
+              
               <?php if (empty($published)): ?>
                 <label for="published">Published</label>
                 <input type="checkbox" name="published"><br>

@@ -39,10 +39,10 @@
           <table class="table table-striped table-sm">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Header</th>
-                <th scope="col">Header</th>
-                <th scope="col">Header</th>
+                <th scope="col">Number</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -50,13 +50,13 @@
               <tr>
                 <td><?php echo $key + 1; ?></td>
                 <td><?php echo $post['title'] ?></td>
-                <td>data</td>
-                <td>edit</td>
-                <td>delete</td>
+                <td><?php echo $post['user_id'] ?></td>
+                <td><a href="edit.php?id=<?php echo $post['id'];?>">edit</a></td>
+                <td><a href="edit.php?delete_id=<?php echo $post['id'];?>">delete</a></td>
                 <?php if ($post['published']): ?>
-                  <td><a href="" class="unpublish">unpublish</a></td>
+                  <td><a href="edit.php?published=0&p_id=<?php echo $post['id'] ?>" class="unpublish">unpublish</a></td>
                 <?php else:?>
-                <td><a href="" class="publish">publish</a></td>
+                  <td><a href="edit.php?published=1&p_id=<?php echo $post['id'] ?>" class="publish">publish</a></td>
                 <?php endif; ?>
               </tr>
               <?php endforeach; ?>
