@@ -31,7 +31,7 @@
           <a href="index.php" class="btn btn-success" role="button">Lista članaka</a>
           <a href="create.php" class="btn btn-primary" role="button">Dodaj članak</a>
         </div>
-        <h2>Lista svih članaka</h2>
+        <h2 class="text-center">Lista svih članaka</h2>
 
         <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
 

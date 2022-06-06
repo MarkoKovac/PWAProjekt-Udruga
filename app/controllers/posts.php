@@ -2,6 +2,7 @@
 
 include(ROOT_PATH . "/app/database/db.php");
 include(ROOT_PATH . "/app/helpers/validatePosts.php");
+
 session_start();
 
 $table = 'posts';
@@ -9,6 +10,7 @@ $errors = array();
 
 $posts = selectAll($table);
 
+$id = "";
 $title = "";
 $body = "";
 $published = "";
@@ -36,7 +38,7 @@ if(isset($_GET['published']) && isset($_GET['p_id'])) {
 
 if (isset($_GET['delete_id'])) {
     $count = delete($table,$_GET['delete_id']);
-    $post_id = create($table, $_POST);
+    //$post_id = create($table, $_POST);
     $_SESSION['message'] = "Post deleted successfully";
     $_SESSION['type'] = "success";
     header("location: " . BASE_URL . "/admin/posts/index.php");
@@ -101,7 +103,6 @@ if (isset($_POST['update-post'])){
     if (count($errors) == 0) {
         $id = $_POST['id'];
         unset($_POST['update-post'], $_POST['id']);
-        $_POST['user_id'] = 1;
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
         $_POST['body'] = htmlentities($_POST['body']);
     

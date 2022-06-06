@@ -20,16 +20,18 @@
 <body>
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/adminHeader.php"); ?>
+
   <div class="container-fluid">
     <div class="row">
       <!--SideBar-->
       <?php include(ROOT_PATH . "/app/includes/adminSidebar.php"); ?>
+      
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
           <a href="index.php" class="btn btn-success" role="button">Lista članaka</a>
           <a href="create.php" class="btn btn-primary" role="button">Dodaj članak</a>
         </div>
-        <h2>Uredi članak</h2>
+        <h2 class="text-center">Uredi članak</h2>
 
         <?php include(ROOT_PATH . '/app/helpers/formErrors.php') ?>
 
@@ -38,24 +40,34 @@
           <input type="hidden" name="id" value="<?php echo $id ?>"><br>
           <div class="row d-flex justify-content-center">
             <div class="col-md-9">
+            <fieldset class="form-group">
               <label for="title" class="form-label">Naslov:</label><br>
               <input type="text" id="title" name="title" class="form-control" value="<?php echo $title ?>"><br>
-
+              </fieldset>
+              <fieldset class="form-group">
               <label for="body" class="form-label">Text:</label><br>
               <textarea name="body" id="body" rows="10" cols="30" class="form-control"><?php echo $body ?></textarea><br>
-
+              </fieldset>
+              <fieldset class="form-group">
               <label for="myfile" class="form-label">Dodajte slike:</label><br>
               <input type="file" id="myfile" name="image" class="form-control"><br>
-
+              </fieldset>
+              <fieldset class="form-group">
               <?php if (empty($published) && $published == 0) : ?>
-                <label for="published">Published</label>
-                <input type="checkbox" name="published"><br>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="published">
+                <label class="form-check-label" for="published">Published</label><br>
+                </div>
               <?php else : ?>
-                <label for="published">Published</label>
-                <input type="checkbox" name="published" checked><br>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="published" checked>
+                <label class="form-check-label" for="published">Published</label><br>
+                </div>
               <?php endif; ?>
-
+              </fieldset>
+              <fieldset class="form-group">
               <button name="update-post" type="submit" class="btn btn-primary my-3">Uredi članak</button>
+              </fieldset>
             </div>
           </div>
         </form>

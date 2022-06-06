@@ -31,7 +31,7 @@
           <a href="index.php" class="btn btn-success" role="button">Lista životinja</a>
           <a href="create.php" class="btn btn-primary" role="button">Dodaj životinju</a>
         </div>
-        <h2>Lista svih životinja</h2>
+        <h2 class="text-center">Lista svih životinja</h2>
 
         <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
 
@@ -45,14 +45,19 @@
               </tr>
             </thead>
             <tbody>
+            <?php foreach ($animals as $key => $animal):?>
               <tr>
-                <td>1,001</td>
-                <td>random</td>
-                <td>data</td>
-                <td>edit</td>
-                <td>delete</td>
-                <td>publish</td>
+                <td><?php echo $key + 1; ?></td>
+                <td><?php echo $animal['title'] ?></td>
+                <td><a href="edit.php?id=<?php echo $animal['id'];?>">edit</a></td>
+                <td><a href="edit.php?delete_id=<?php echo $animal['id'];?>">delete</a></td>
+                <?php if ($animal['published']): ?>
+                  <td><a href="edit.php?published=0&p_id=<?php echo $animal['id'] ?>" class="unpublish">unpublish</a></td>
+                <?php else:?>
+                  <td><a href="edit.php?published=1&p_id=<?php echo $animal['id'] ?>" class="publish">publish</a></td>
+                <?php endif; ?>
               </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>

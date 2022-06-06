@@ -19,7 +19,6 @@
                 array_push($errors, 'Post with that title already exists');
             }
         }
-
         return $errors;
     }
 ?>
