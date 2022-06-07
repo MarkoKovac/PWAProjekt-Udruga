@@ -36,7 +36,7 @@
         <?php include(ROOT_PATH . '/app/helpers/formErrors.php') ?>
 
         <!--Forma-->
-        <form action="edit.php" method="post" enctype="multipart/form-data">
+        <form action="edit.php?id=<?php echo $post['id'];?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" value="<?php echo $id ?>"><br>
           <div class="row d-flex justify-content-center">
             <div class="col-md-9">
