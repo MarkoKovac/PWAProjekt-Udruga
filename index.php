@@ -1,4 +1,9 @@
-<?php include("path.php"); 
+<?php 
+      include("path.php");
+      include(ROOT_PATH . "/app/controllers/posts.php");
+
+      $posts = selectAll('posts', ['published' => 1]);
+      $animals = selectAll('animals', ['published' => 1]);
       error_reporting(0);
 ?>
 <!DOCTYPE html>
@@ -134,107 +139,57 @@
   <div class="container">
     <h2 class="text-center">Naši Najnoviji Članovi</h2>
     <div class="row pt-3">
+
+    <?php 
+      $i = 0;
+      foreach (array_reverse($animals) as $key => $animal): 
+        if( $i >= 4) break;?>
+
         <div class="col-lg-3 col-6 pb-lg-0 pb-3">
           <a href="#" class="card-link">
             <div class="card">
-              <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">  
+              <img class="card-img-top" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">  
               <div class="card-body">
-                  <h5 class="card-title">Ime</h5>
-                  <p class="card-text">Vrsta:</p>
+                  <h5 class="card-title"><?php echo $animal['title']; ?></h5>
+                  <p class="card-text"><?php echo $animal['spol'];?></p>
               </div>
             </div>
           </a>  
         </div>
-        <div class="col-lg-3 col-6 pb-lg-0 pb-3">
-            <a href="#" class="card-link">
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">  
-                  <div class="card-body">
-                      <h5 class="card-title">Ime</h5>
-                      <p class="card-text">Vrsta:</p>
-                  </div>
-                </div>
-              </a>  
-        </div>
-        <div class="col-lg-3 col-6">
-            <a href="#" class="card-link">
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">  
-                  <div class="card-body">
-                      <h5 class="card-title">Ime</h5>
-                      <p class="card-text">Vrsta:</p>
-                  </div>
-                </div>
-              </a>  
-        </div>
-        <div class="col-lg-3 col-6">
-            <a href="#" class="card-link">
-                <div class="card">
-                  <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">  
-                  <div class="card-body">
-                      <h5 class="card-title">Ime</h5>
-                      <p class="card-text">Vrsta:</p>
-                  </div>
-                </div>
-              </a>  
-          </div>
+
+        <?php $i++;
+      endforeach; ?>
+
       </div>
   </div>
   </div>
   <div class="container pt-3">
     <h2 class="text-center">Naše Novosti</h2>
     <div class="row pt-3">
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
+
+    	<?php 
+      $i = 0;
+      foreach (array_reverse($posts) as $key => $post): 
+        if( $i >= 3) break;?>
+
+        <div class="col-lg-4 col-12 pb-lg-0 pb-3">
         <a href="#" class="card-link">
           <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
+            <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" alt="" width="100%">
+            <hr>
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <h5 class="card-title"><?php echo $post['title']; ?></h5>
             </div>
             <div class="card-footer text-muted">
-              2 days ago
+              <?php echo date('F j, Y', strtotime($post['created_at']));?>
             </div>
           </div>
         </a>
       </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
+
+      <?php $i++;
+      endforeach; ?>
+
     </div>
   </div>
 

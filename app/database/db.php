@@ -109,3 +109,4 @@ function delete($table, $id){
     $stmt = executeQuery($sql, ['id' => $id]);
     return $stmt->affected_rows;
 }
+

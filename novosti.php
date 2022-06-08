@@ -1,5 +1,8 @@
-<?php include("path.php"); 
-      error_reporting(0);
+<?php 
+    include("path.php");
+    include(ROOT_PATH . "/app/controllers/posts.php");
+    $animals = selectAll('posts', ['published' => 1]);
+    error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,163 +51,26 @@
 
   <div class="container">
     <div class="row pt-3">
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
+
+    <?php foreach (array_reverse($posts) as $key => $post): ?>
+
+        <div class="col-lg-4 col-12 pb-lg-0 pb-3">
         <a href="#" class="card-link">
           <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
+            <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" alt="" width="100%">
+            <hr>
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <h5 class="card-title"><?php echo $post['title']; ?></h5>
             </div>
             <div class="card-footer text-muted">
-              2 days ago
+              <?php echo date('F j, Y', strtotime($post['created_at']));?>
             </div>
           </div>
         </a>
       </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="row pt-3">
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="row pt-3">
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-        <a href="#" class="card-link">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-        </a>
-      </div>
+
+      <?php endforeach; ?>
+
     </div>
   </div>
 
