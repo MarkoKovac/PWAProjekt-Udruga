@@ -1,5 +1,8 @@
-<?php include("path.php"); ?>
-<?php include(ROOT_PATH . "/app/controllers/users.php"); ?>
+<?php
+include("path.php");
+include(ROOT_PATH . "/app/controllers/users.php");
+error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,29 +21,29 @@
 
 <body>
 
-  <!--Header-->
-  <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
+    <!--Header-->
+    <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
     <div class="container" style="height: 500px;">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-10 col-md-4">
 
-        <form action="login.php" method="POST">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                <form action="login.php" method="POST">
+                    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-            <?php include(ROOT_PATH. "/app/helpers/formErrors.php"); ?>
+                    <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?>
 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" name="username" value="<?php echo $username; ?>">
-                <label for="floatingInput">Username</label>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" name="username" value="<?php echo $username; ?>">
+                        <label for="floatingInput">Username</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" name="password" value="<?php echo $password; ?>">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary mt-3" type="submit" name="login-btn">Sign in</button>
+                </form>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" name="password" value="<?php echo $password; ?>">
-                <label for="floatingPassword">Password</label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary mt-3" type="submit" name="login-btn">Sign in</button>
-        </form>
-        </div>
         </div>
     </div>
 

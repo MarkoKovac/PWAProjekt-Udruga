@@ -4,6 +4,7 @@ include(ROOT_PATH . "/app/helpers/validateUsers.php");
 error_reporting(0);
 
 $errors = array();
+
 $username = '';
 $email = '';
 $password = '';
@@ -44,9 +45,7 @@ function loginUser($user) {
           else {
               array_push($errors, 'Wrong credentials');
           }
-      
       $username = $_POST['username'];
       $password = $_POST['password'];
     }
   }
-?>

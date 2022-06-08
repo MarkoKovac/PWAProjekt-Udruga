@@ -1,4 +1,4 @@
-<?php 
+<?php
     include("path.php");
     include(ROOT_PATH . "/app/controllers/animals.php");
     error_reporting(0);
@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LePas Udruga za zaštitu životinja</title>
+  <title>Udomi - LePas Udruga za zaštitu životinja</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Font awesome ikone-->
@@ -47,24 +47,23 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-
             <form action="udomi.php" method="GET" id="form1">
               <fieldset class="form-group">
                 <div class="row">
                   <legend class="col-form-label col-sm-2 pt-0">Vrsta</legend>
                   <div class="col-sm-10">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="vrsta" id="vrsta1" value="Pas">
-                    <label class="form-check-label" for="vrsta1">
-                      Pas
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="vrsta" id="vrsta2" value="Macka">
-                    <label class="form-check-label" for="vrsta2">
-                      Mačka
-                    </label>
-                  </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="vrsta" id="vrsta1" value="Pas">
+                      <label class="form-check-label" for="vrsta1">
+                        Pas
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="vrsta" id="vrsta2" value="Macka">
+                      <label class="form-check-label" for="vrsta2">
+                        Mačka
+                      </label>
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -73,18 +72,18 @@
                 <div class="row">
                   <legend class="col-form-label col-sm-2 pt-0">Spol</legend>
                   <div class="col-sm-10">
-                  <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="spol" id="spol1" value="Musko">
-                  <label class="form-check-label" for="spol1">
-                    Muško
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="spol" id="spol2" value="Zensko">
-                  <label class="form-check-label" for="spol2">
-                    Žensko
-                  </label>
-                </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="spol" id="spol1" value="Musko">
+                      <label class="form-check-label" for="spol1">
+                        Muško
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="spol" id="spol2" value="Zensko">
+                      <label class="form-check-label" for="spol2">
+                        Žensko
+                      </label>
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -93,35 +92,32 @@
                 <div class="row">
                   <legend class="col-form-label col-sm-2 pt-0">Velicine</legend>
                   <div class="col-sm-10">
-                  <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="velicina" id="velicina1" value="Mali">
-                  <label class="form-check-label" for="velicina1">
-                    Mali
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="velicina" id="velicina2" value="Srednji">
-                  <label class="form-check-label" for="velicina2">
-                    Srednji
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" name="velicina" id="velicina2" value="Veliki">
-                  <label class="form-check-label" for="velicina2">
-                    Veliki
-                  </label>
-                </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="velicina" id="velicina1" value="Mali">
+                      <label class="form-check-label" for="velicina1">
+                        Mali
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="velicina" id="velicina2" value="Srednji">
+                      <label class="form-check-label" for="velicina2">
+                        Srednji
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="velicina" id="velicina2" value="Veliki">
+                      <label class="form-check-label" for="velicina2">
+                        Veliki
+                      </label>
+                    </div>
                   </div>
                 </div>
               </fieldset>
-
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" form="form1" class="btn btn-dark" style="background-color: rgb(238, 135, 135);" >Trazi</button>
-            </div>
-
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" form="form1" class="btn btn-dark" style="background-color: rgb(238, 135, 135);">Trazi</button>
+              </div>
             </form>
-
           </div>
 
         </div>
@@ -141,27 +137,27 @@
   <div class="container">
     <div class="row pt-3">
 
-    <?php
-      if(isset($_GET['vrsta']) && isset($_GET['spol']) && isset($_GET['velicina'])){
-          $animals = selectAll('animals', ['published' => 1,'vrsta' => $_GET['vrsta'],'spol' => $_GET['spol'], 'velicina' => $_GET['velicina']]);
+      <?php
+      if (isset($_GET['vrsta']) && isset($_GET['spol']) && isset($_GET['velicina'])) {
+        $animals = selectAll('animals', ['published' => 1, 'vrsta' => $_GET['vrsta'], 'spol' => $_GET['spol'], 'velicina' => $_GET['velicina']]);
       } else {
-          $animals = selectAll('animals', ['published' => 1]);
+        $animals = selectAll('animals', ['published' => 1]);
       }
-    foreach (array_reverse($animals) as $key => $animal): ?>
+      foreach (array_reverse($animals) as $key => $animal) : ?>
 
-      <div class="col-lg-3 col-6 pb-lg-0 pb-3 mb-4">
+        <div class="col-lg-3 col-6 pb-lg-0 pb-3 mb-4">
           <a href="#" class="card-link">
             <div class="card">
-              <img class="card-img-top" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">  
+              <img class="card-img-top" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">
               <div class="card-body">
-                  <h5 class="card-title"><?php echo $animal['title']; ?></h5>
-                  <p class="card-text"><?php echo $animal['spol'];?></p>
+                <h5 class="card-title"><?php echo $animal['title']; ?></h5>
+                <p class="card-text"><?php echo $animal['spol']; ?></p>
               </div>
             </div>
-          </a>  
+          </a>
         </div>
 
-    <?php endforeach; ?>
+      <?php endforeach; ?>
 
     </div>
   </div>
