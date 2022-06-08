@@ -1,7 +1,6 @@
 <?php 
     include("path.php");
     include(ROOT_PATH . "/app/controllers/animals.php");
-
     error_reporting(0);
 ?>
 <!DOCTYPE html>
