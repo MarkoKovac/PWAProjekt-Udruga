@@ -16,6 +16,7 @@ error_reporting(0);
   <!--Font awesome ikone-->
   <script src="https://kit.fontawesome.com/1c5108fa97.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -115,7 +116,7 @@ error_reporting(0);
               </fieldset>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" form="form1" class="btn btn-dark" style="background-color: rgb(238, 135, 135);">Trazi</button>
+                <button type="submit" form="form1" class="btn btn-dark gumb1" style="background-color: rgb(238, 135, 135);">Trazi</button>
               </div>
             </form>
           </div>
@@ -147,7 +148,7 @@ error_reporting(0);
 
         <div class="col-lg-3 col-6 pb-lg-0 pb-3 mb-4">
           <a href="#" class="card-link">
-            <div class="card">
+            <div class="card h-100">
               <img class="card-img-top" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $animal['title']; ?></h5>

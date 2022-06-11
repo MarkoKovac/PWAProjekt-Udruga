@@ -15,6 +15,7 @@ error_reporting(0);
   <!--Font awesome ikone-->
   <script src="https://kit.fontawesome.com/1c5108fa97.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>

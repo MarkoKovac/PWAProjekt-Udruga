@@ -1,4 +1,4 @@
-<?php 
+<?php
 include(ROOT_PATH . "/app/database/db.php");
 include(ROOT_PATH . "/app/helpers/validateAnimals.php");
 
@@ -19,7 +19,6 @@ $published = "";
 
 if (isset($_GET['id'])) {
     $animal = selectOne($table, ['id' => $_GET['id']]);
-
     $id = $animal['id'];
     $title = $animal['title'];
     $body = $animal['body'];
@@ -48,6 +47,7 @@ if (isset($_GET['delete_id'])) {
 }
 
 if (isset($_POST['add-animal'])){
+    dd($_POST);
     $errors = validateAnimals($_POST);
 
     if (!empty($_FILES['image']['name'])) {
@@ -70,7 +70,7 @@ if (isset($_POST['add-animal'])){
         $animal_id = create($table, $_POST);
         $_SESSION['message'] = "Animal created successfully";
         $_SESSION['type'] = "success";
-        header("location: " . BASE_URL . "/admin/animals/index.php");
+        header("location: " . BASE_URL . "/admin/animals/index");
         exit();
     } else {
         $title = $_POST['title'];
@@ -105,7 +105,7 @@ if (isset($_POST['update-animal'])){
         $animal_id = update($table, $id, $_POST);
         $_SESSION['message'] = "Animal updated successfully";
         $_SESSION['type'] = "success";
-        header("location: " . BASE_URL . "/admin/animals/index.php");
+        header("location: " . BASE_URL . "/admin/animals/index");
         exit();
     } else {
         $title = $_POST['title'];

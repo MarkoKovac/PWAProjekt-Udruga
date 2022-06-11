@@ -127,13 +127,13 @@ error_reporting(0);
       <h2 class="text-center">Udomi</h2>
       <div class="col-5 text-center">
         <a href="#">
-          <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-100">
+          <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-75">
           <p>Udomi peseka</p>
         </a>
       </div>
       <div class="col-5 text-center">
         <a href="#">
-          <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-100">
+          <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-75">
           <p>Udomi macu</p>
         </a>
       </div>
@@ -151,8 +151,8 @@ error_reporting(0);
 
           <div class="col-lg-3 col-6 pb-lg-0 pb-3">
             <a href="#" class="card-link">
-              <div class="card">
-                <img class="card-img-top" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">
+              <div class="card h-100">
+                <img class="card-img-top"  src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $animal['title']; ?></h5>
                   <p class="card-text"><?php echo $animal['spol']; ?></p>
