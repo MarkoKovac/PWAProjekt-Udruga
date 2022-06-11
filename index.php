@@ -124,17 +124,21 @@ error_reporting(0);
   <!--PesekiMace-->
   <div class="container">
     <div class="row d-flex justify-content-around m-3">
-      <h2 class="text-center">Udomi</h2>
-      <div class="col-5 text-center">
+      <h2 class="text-center display-2">Udomi</h2>
+      <div class="col-5 text-center cont-round">
         <a href="#">
-          <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-75">
-          <p>Udomi peseka</p>
+          <img src="assets/images/opcija1.png" alt="" class="image">
+            <div class="overlay">
+              <i class="fa-solid fa-paw fa-2xl ikona"></i>
+            </div>
         </a>
       </div>
-      <div class="col-5 text-center">
+      <div class="col-5 text-center cont-round">
         <a href="#">
-          <img src="https://via.placeholder.com/301x301" alt="" class="rounded-circle w-75">
-          <p>Udomi macu</p>
+          <img src="assets/images/opcija2.png" alt="" class="image">
+            <div class="overlay">
+            <i class="fa-solid fa-paw fa-2xl ikona"></i>
+            </div>
         </a>
       </div>
     </div>
