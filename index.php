@@ -97,7 +97,7 @@ error_reporting(0);
   <div class="container p-5">
     <div class="row">
       <div class="col text-center">
-        <img src="logo.png" alt="">
+        <img src="assets/images/logo2.png" alt="logo udruge" class="w-50">
         <p>LePas je mlada udruga za dobrobit i zaštitu životinja koja je službeno s radom započela 11. rujna 2020. godine,
           no članovi udruge već su godinama aktivni i vrlo iskusni volonteri koji iza sebe imaju jako velik broj spašenih života i udomljenih životinja.</p>
       </div>
