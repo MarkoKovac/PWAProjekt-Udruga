@@ -27,7 +27,6 @@ error_reporting(0);
 <body>
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
-
   <!--Carousel-->
   <div class="container-fluid p-0">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -97,13 +96,16 @@ error_reporting(0);
   <div class="container p-5">
     <div class="row">
       <div class="col text-center">
-        <img src="assets/images/logo2.png" alt="logo udruge" class="w-50">
+        <div class="col col-md-4 mx-auto">
+          <img class="w-100" src="assets/images/logo2.png" alt="logo udruge">
+        </div>
         <p>LePas je mlada udruga za dobrobit i zaštitu životinja koja je službeno s radom započela 11. rujna 2020. godine,
           no članovi udruge već su godinama aktivni i vrlo iskusni volonteri koji iza sebe imaju jako velik broj spašenih života i udomljenih životinja.</p>
       </div>
     </div>
   </div>
-  <div class="container-fluid" style="background-color: rgb(255, 184, 184);">
+  <!--Counter-->
+  <div class="container-fluid counter">
     <div class="container text-white fw-bold">
       <div class="row text-center d-flex justify-content-between">
         <div class="col-md-4 col-12 p-md-4 p-3">
@@ -126,24 +128,24 @@ error_reporting(0);
     <div class="row d-flex justify-content-around m-3">
       <h2 class="text-center display-2">Udomi</h2>
       <div class="col-5 text-center cont-round">
-        <a href="#">
+        <a href="http://localhost/CMSSS/udomi.php?vrsta=Pas">
           <img src="assets/images/opcija1.png" alt="" class="image">
-            <div class="overlay">
-              <i class="fa-solid fa-paw fa-2xl ikona"></i>
-            </div>
+          <div class="overlay">
+            <i class="fa-solid fa-paw fa-2xl ikona"></i>
+          </div>
         </a>
       </div>
       <div class="col-5 text-center cont-round">
-        <a href="#">
+        <a href="http://localhost/CMSSS/udomi.php?vrsta=Macka">
           <img src="assets/images/opcija2.png" alt="" class="image">
-            <div class="overlay">
+          <div class="overlay">
             <i class="fa-solid fa-paw fa-2xl ikona"></i>
-            </div>
+          </div>
         </a>
       </div>
     </div>
   </div>
-  <div class="container-fluid py-4" style="background-color: rgb(226, 226, 226);">
+  <div class="container-fluid py-4 noviclanovi">
     <div class="container">
       <h2 class="text-center">Naši Najnoviji Članovi</h2>
       <div class="row pt-3">
@@ -155,18 +157,18 @@ error_reporting(0);
 
           <div class="col-lg-3 col-6 pb-lg-0 pb-3">
             <a href="#" class="card-link">
-              <div class="card h-100">
-                <img class="card-img-top"  src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">
+              <div class="card card-visina1">
+                <img class="card-img-top1" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>">
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $animal['title']; ?></h5>
-                  <p class="card-text"><?php echo $animal['spol']; ?></p>
+                  <p class="card-text"><?php echo $animal['vrsta'].' '; echo $animal['spol'].' '; echo $animal['velicina'].' ';?></p>
                 </div>
               </div>
             </a>
           </div>
 
         <?php $i++;
-        endforeach; ?>
+        endforeach; ?> 
 
       </div>
     </div>
@@ -182,11 +184,11 @@ error_reporting(0);
 
         <div class="col-lg-4 col-12 pb-lg-0 pb-3">
           <a href="#" class="card-link">
-            <div class="card">
-              <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" alt="" width="100%">
-              <hr>
+            <div class="card card-visina2">
+              <img class="card-img-top2" src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $post['title']; ?></h5>
+                <p class="card-text"><?php echo implode(' ', array_slice(explode(' ', $post['body']), 0, 20)).'...' ?></p>
               </div>
               <div class="card-footer text-muted">
                 <?php echo date('F j, Y', strtotime($post['created_at'])); ?>

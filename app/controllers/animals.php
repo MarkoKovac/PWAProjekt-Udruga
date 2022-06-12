@@ -47,7 +47,6 @@ if (isset($_GET['delete_id'])) {
 }
 
 if (isset($_POST['add-animal'])){
-    dd($_POST);
     $errors = validateAnimals($_POST);
 
     if (!empty($_FILES['image']['name'])) {

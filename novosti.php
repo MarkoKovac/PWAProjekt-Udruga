@@ -29,8 +29,7 @@ error_reporting(0);
     <div class="container">
       <div class="jumbotron">
         <h1>Novosti</h1>
-        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
+        <p>Ovdje možete saznati čime se općenito bavimo, kako provodimo vrijeme s našim životinjama i  na koje im sve načine pomažemo. Isto tako možete pročitati i priče o sretnim udomljenjima.</p>
       </div>
     </div>
   </div>
@@ -54,13 +53,13 @@ error_reporting(0);
 
       <?php foreach (array_reverse($posts) as $key => $post) : ?>
 
-        <div class="col-lg-4 col-12 pb-lg-0 pb-3 mb-4">
+        <div class="col-lg-4 col-12 pb-lg-4 pb-3">
           <a href="#" class="card-link">
-            <div class="card">
-              <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" alt="" width="100%">
-              <hr>
+            <div class="card card-visina2">
+              <img class="card-img-top2" src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $post['title']; ?></h5>
+                <p class="card-text"><?php echo implode(' ', array_slice(explode(' ', $post['body']), 0, 20)).'...' ?></p>
               </div>
               <div class="card-footer text-muted">
                 <?php echo date('F j, Y', strtotime($post['created_at'])); ?>
@@ -68,6 +67,7 @@ error_reporting(0);
             </div>
           </a>
         </div>
+
 
       <?php endforeach; ?>
 

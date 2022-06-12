@@ -18,19 +18,15 @@ error_reporting(0);
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/script.js" defer></script>
 </head>
-
 <body>
-
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
-
   <!--Jumbotron-->
-  <div class="container-fluid p-2  p-md-5" style="background-color: rgb(248, 183, 183);">
+  <div class="container-fluid p-2  p-md-5 jumbo">
     <div class="container">
       <div class="jumbotron">
         <h1>Udomite psa ili macku</h1>
-        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
+        <p>Ovdje možete saznati nešto više o životinjama koje su kod nas. S filterom možete pronaći specifičnu životinju koja odgovara točno vama i s kojom će te stvoriti predivne uspomene.</p>
       </div>
     </div>
   </div>
@@ -116,7 +112,7 @@ error_reporting(0);
               </fieldset>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" form="form1" class="btn btn-dark gumb1" style="background-color: rgb(238, 135, 135);">Trazi</button>
+                <button type="submit" form="form1" class="btn btn-dark trazi" style="background-color: rgb(238, 135, 135);">Trazi</button>
               </div>
             </form>
           </div>
@@ -141,22 +137,34 @@ error_reporting(0);
       <?php
       if (isset($_GET['vrsta']) && isset($_GET['spol']) && isset($_GET['velicina'])) {
         $animals = selectAll('animals', ['published' => 1, 'vrsta' => $_GET['vrsta'], 'spol' => $_GET['spol'], 'velicina' => $_GET['velicina']]);
-      } else {
+      } else if (isset($_GET['vrsta']) && isset($_GET['spol'])) {
+        $animals = selectAll('animals', ['published' => 1, 'vrsta' => $_GET['vrsta'], 'spol' => $_GET['spol']]);
+      } else if (isset($_GET['vrsta']) && isset($_GET['velicina'])) {
+        $animals = selectAll('animals', ['published' => 1, 'vrsta' => $_GET['vrsta'], 'velicina' => $_GET['velicina']]);
+      } else if (isset($_GET['spol']) && isset($_GET['velicina'])) {
+        $animals = selectAll('animals', ['published' => 1, 'spol' => $_GET['spol'], 'velicina' => $_GET['velicina']]);
+      } else if (isset($_GET['vrsta'])) {
+        $animals = selectAll('animals', ['published' => 1, 'vrsta' => $_GET['vrsta']]);
+      } else if (isset($_GET['spol'])) {
+        $animals = selectAll('animals', ['published' => 1, 'spol' => $_GET['spol']]);
+      } else if (isset($_GET['velicina'])) {
+        $animals = selectAll('animals', ['published' => 1, 'velicina' => $_GET['velicina']]);
+      } else{
         $animals = selectAll('animals', ['published' => 1]);
       }
       foreach (array_reverse($animals) as $key => $animal) : ?>
 
-        <div class="col-lg-3 col-6 pb-lg-0 pb-3 mb-4">
-          <a href="#" class="card-link">
-            <div class="card h-100">
-              <img class="card-img-top" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"><?php echo $animal['title']; ?></h5>
-                <p class="card-text"><?php echo $animal['spol']; ?></p>
+          <div class="col-lg-3 col-6 pb-3">
+            <a href="#" class="card-link">
+              <div class="card card-visina1">
+                <img class="card-img-top1" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $animal['title']; ?></h5>
+                  <p class="card-text"><?php echo $animal['vrsta'].' '; echo $animal['spol'].' '; echo $animal['velicina'].' ';?></p>
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
       <?php endforeach; ?>
 

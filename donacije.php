@@ -33,19 +33,23 @@ error_reporting(0);
       </div>
     </div>
   </div>
+
+  
   <div class="container p-5">
     <div class="row text-center">
-      <div class="col-md-4 col-12">
+    <div class="col-md-4 col-12">
         <span class="fa-stack fa-2x">
           <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-dollar-sign fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-info fa-stack-1x fa-inverse"></i>
         </span>
-        <h2>Novčane uplate</h2>
-        <p>IBAN: HR3923600001102884721</p>
-        <p>SWIFT: ZABAHR2X</p>
-        <p>PAYPAL: udruga@lepas.hr</p>
-        <p>KEKSPAY: 0981397298</p>
+        <h2>Volonterstvo</h2>
+        <p>Šetnje</p>
+        <p>Privremeni smještaj</p>
+        <p>Postani teta čuvalica</p>
+        <a class="link-danger" href="">Saznaj više</a>
+        <p></p>
       </div>
+      <hr class="d-sm-none d-inline">
       <div class="col-md-4 col-12">
         <span class="fa-stack fa-2x">
           <i class="fa fa-circle fa-stack-2x"></i>
@@ -57,13 +61,50 @@ error_reporting(0);
         <p>Povodci</p>
         <p>Zdjelice</p>
       </div>
+      <hr class="d-sm-none d-inline">
       <div class="col-md-4 col-12">
         <span class="fa-stack fa-2x">
           <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-dollar-sign fa-stack-1x fa-inverse"></i>
         </span>
-        <h2>Volonterstvo</h2>
-        <p></p>
+        <h2>Novčane uplate</h2>
+        <p>IBAN: HR3923600001102884721</p>
+        <p>SWIFT: ZABAHR2X</p>
+        <p>PAYPAL: udruga@lepas.hr</p>
+        <p>KEKSPAY: 0981397298</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">O Udruzi</h2>
+        <p class="lead">LePas je mlada udruga za dobrobit i zaštitu životinja koja je službeno s radom započela 11. rujna 2020. godine, no članovi udruge već su godinama aktivni i vrlo iskusni volonteri koji iza sebe imaju jako velik broj spašenih života i udomljenih životinja.</p>
+      </div>
+      <div class="col-md-5 my-auto">
+        <img src="assets/images/onama1.png" alt="" width="100%">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Naši Članovi</span></h2>
+        <p class="lead">Trenutno u udruzi brojimo 4 aktivna člana, dok na skrbi imamo 80-ak pasa i mačaka. Većina ih se nalazi u našem utočištu, koje dijele s dvoje volontera, našom predsjednicom Tihanom te njenim zaručnikom Damirom.</p>
+      </div>
+      <div class="col-md-5 order-md-1 my-auto">
+        <img src="assets/images/onama2.png" alt="" width="100%">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Cilj Udruge</h2>
+        <p class="lead">Naš cilj i ključni dio naše misije je pomaganje životinjama od kojih drugi okreću glave jer su bolesne, teško udomljive ili stare (skupina na koju smo posebno slabi). Zbog toga smo početkom 2021. godine, nakon što je dio Hrvatske pogodio jedan od najrazornijih potresa ikad zabilježenih, iz zahvaćenih područja preuzeli 94 psa među kojima je najveći postotak upravo ovih “neprimjetnih”.</p>
+      </div>
+      <div class="col-md-5 my-auto">
+        <img src="assets/images/onama3.png" alt="" width="100%">
       </div>
     </div>
   </div>

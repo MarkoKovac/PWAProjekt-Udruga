@@ -4,7 +4,6 @@ error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,19 +16,15 @@ error_reporting(0);
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/script.js" defer></script>
 </head>
-
 <body>
-
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
-
   <!--Jumbotron-->
   <div class="container-fluid p-2  p-md-5" style="background-color: rgb(248, 183, 183);">
     <div class="container">
       <div class="jumbotron">
         <h1>O nama</h1>
-        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
+        <p>Ovdje možete saznati nešto više o samoj udruzi, našim članovima i našem cilju koji nas potiče da nastavimo dalje pomagati životinjama.</p>
       </div>
     </div>
   </div>
@@ -41,7 +36,7 @@ error_reporting(0);
         <p class="lead">LePas je mlada udruga za dobrobit i zaštitu životinja koja je službeno s radom započela 11. rujna 2020. godine, no članovi udruge već su godinama aktivni i vrlo iskusni volonteri koji iza sebe imaju jako velik broj spašenih života i udomljenih životinja.</p>
       </div>
       <div class="col-md-5 my-auto">
-        <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
+        <img src="assets/images/onama1.png" alt="" width="100%">
       </div>
     </div>
     <hr class="featurette-divider">
@@ -51,7 +46,7 @@ error_reporting(0);
         <p class="lead">Trenutno u udruzi brojimo 4 aktivna člana, dok na skrbi imamo 80-ak pasa i mačaka. Većina ih se nalazi u našem utočištu, koje dijele s dvoje volontera, našom predsjednicom Tihanom te njenim zaručnikom Damirom.</p>
       </div>
       <div class="col-md-5 order-md-1 my-auto">
-        <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
+        <img src="assets/images/onama2.png" alt="" width="100%">
       </div>
     </div>
     <hr class="featurette-divider">
@@ -61,25 +56,25 @@ error_reporting(0);
         <p class="lead">Naš cilj i ključni dio naše misije je pomaganje životinjama od kojih drugi okreću glave jer su bolesne, teško udomljive ili stare (skupina na koju smo posebno slabi). Zbog toga smo početkom 2021. godine, nakon što je dio Hrvatske pogodio jedan od najrazornijih potresa ikad zabilježenih, iz zahvaćenih područja preuzeli 94 psa među kojima je najveći postotak upravo ovih “neprimjetnih”.</p>
       </div>
       <div class="col-md-5 my-auto">
-        <img src="https://via.placeholder.com/1080x720" alt="" width="100%">
+        <img src="assets/images/onama3.png" alt="" width="100%">
       </div>
     </div>
     <hr class="featurette-divider">
   </div>
-  <div class="container-fluid" style="background-color: rgb(255, 184, 184);">
+  <div class="container-fluid counter">
     <div class="container text-white fw-bold">
       <div class="row text-center d-flex justify-content-between">
         <div class="col-md-4 col-12 p-md-4 p-3">
-          <span class="fs-1">350+</span>
+          <span id="count1">0</span>
           <p class="fs-4">Ukupno udomljenih životinja</p>
         </div>
         <div class="col-md-4 col-12 p-md-4 p-3">
-          <span class="fs-1">80+</span>
+          <span id="count2">0</span>
           <p class="fs-4">Životinja za koje trenutno brinemo</p>
         </div>
         <div class="col-md-4 col-12 p-md-4 p-3">
-          <span class="fs-1">90+</span>
-          <p class="fs-4">Pasa iz potresom potresenih područja</p>
+          <span id="count3">0</span>
+          <p class="fs-4">Pasa iz potresom zahvacenih područja</p>
         </div>
       </div>
     </div>
@@ -93,7 +88,7 @@ error_reporting(0);
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
+                Pitanje 1
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -105,7 +100,7 @@ error_reporting(0);
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
+                Pitanje 2
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -117,7 +112,7 @@ error_reporting(0);
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
+                Pitanje 3
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -130,7 +125,7 @@ error_reporting(0);
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingFour">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                Accordion Item #4
+                Pitanje 4
               </button>
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -142,7 +137,7 @@ error_reporting(0);
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingFive">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                Accordion Item #5
+               Pitanje 5
               </button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
