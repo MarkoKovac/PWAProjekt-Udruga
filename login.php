@@ -34,7 +34,7 @@ error_reporting(0);
                     <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" name="username" value="<?php echo $username; ?>">
+                        <input type="text" class="form-control" id="floatingInput" name="username" value="<?php echo $username; ?>" autocomplete="off">
                         <label for="floatingInput">Username</label>
                     </div>
                     <div class="form-floating">
