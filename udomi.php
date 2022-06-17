@@ -155,7 +155,7 @@ error_reporting(0);
       foreach (array_reverse($animals) as $key => $animal) : ?>
 
           <div class="col-lg-3 col-6 pb-3">
-            <a href="#" class="card-link">
+            <a href="single_zivotinje.php?id=<?php echo $animal['id']?>" class="card-link">
               <div class="card card-visina1">
                 <img class="card-img-top1" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>">
                 <div class="card-body">

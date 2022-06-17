@@ -9,7 +9,7 @@ error_reporting(0);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LePas Udruga za zaštitu životinja</title>
+  <title>Kontakti - LePas Udruga za zaštitu životinja</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--Font awesome ikone-->
@@ -28,8 +28,7 @@ error_reporting(0);
     <div class="container">
       <div class="jumbotron">
         <h1>Kontakti</h1>
-        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
+        <p>Ovdje možete saznati našu lokaciju i na koje nas sve načine možete kontaktirati. </p>
       </div>
     </div>
   </div>
@@ -37,43 +36,43 @@ error_reporting(0);
   <!-- Wrapper container -->
   <div class="container py-4">
     <div class="row">
-      <div class="col-md-6 col-12">
+      <div class="col-md-6 col-12 mb-3">
         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
           <div class="mb-3">
-            <label class="form-label" for="name">Name</label>
+            <label class="form-label" for="name">Ime i Prezime</label>
             <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+            <div class="invalid-feedback" data-sb-feedback="name:required">Ovo polje je obavezno</div>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="emailAddress">Email Address</label>
+            <label class="form-label" for="emailAddress">Email Adresa</label>
             <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
-            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Ovo polje je obavezno</div>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email adresa ne postoji</div>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="message">Message</label>
+            <label class="form-label" for="message">Poruka</label>
             <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+            <div class="invalid-feedback" data-sb-feedback="message:required">Ovo polje je obavezno</div>
           </div>
           <div class="d-none" id="submitSuccessMessage">
-            <div class="text-center mb-3">Form submission successful!</div>
+            <div class="text-center mb-3">Poruka uspješno poslana</div>
           </div>
           <div class="d-none" id="submitErrorMessage">
-            <div class="text-center text-danger mb-3">Error sending message!</div>
+            <div class="text-center text-danger mb-3">Greška prilikom slanja poruke</div>
           </div>
           <div class="d-grid">
-            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Pošalji</button>
           </div>
         </form>
       </div>
-      <div class="col-md-6 col-12 text-center">
-        <p class="fs-3">Adresa gdje možete doći pogledati i prošetati pse</p>
+      <div class="col-md-6 col-12 mb-3 text-center">
+        <p class="fs-3"><b>Naša adresa</b></p>
         <p class="fs-4">adresaaa, 30</p>
         <hr class="w-75 mx-auto">
-        <p class="fs-3">Broj telefona za hitne slučajeve</p>
+        <p class="fs-3"><b>Broj telefona za hitne slučajeve</b></p>
         <p class="fs-4">0997577693</p>
         <hr class="w-75 mx-auto">
-        <p class="fs-3">G-mail</p>
+        <p class="fs-3"><b>G-mail</b></p>
         <p class="fs-4">lepas@gmail.com</p>
       </div>
     </div>
@@ -81,9 +80,8 @@ error_reporting(0);
 
   <!-- 21:9 aspect ratio -->
   <div class="ratio ratio-21x9">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88945.59460041238!2d15.894292063254266!3d45.84029414735702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d692c902cc39%3A0x3a45249628fbc28a!2sZagreb!5e0!3m2!1shr!2shr!4v1650573738812!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89171.55397814639!2d15.99680665966591!3d45.69877679833686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4766876780b60347%3A0x400ad50862bb790!2sVelika%20Gorica!5e0!3m2!1shr!2shr!4v1655400816856!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
   <!-- Footer -->
   <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 

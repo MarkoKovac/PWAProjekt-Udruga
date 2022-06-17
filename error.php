@@ -30,7 +30,7 @@ error_reporting(0);
       <div class="row text-center mt-4">
           <div class="col">
               <h1 class="mb-3">Došlo je do pogreške!</h1>
-              <img src="<?php echo BASE_URL . '/assets/images/' . 'error.jpg'; ?>" alt="404 Error" class="w-75">
+              <img src="<?php echo BASE_URL . '/assets/images/' . 'error.jpg'; ?>" alt="404 Error" class="w-50">
               <h1 class="my-3">ERROR 404</h1>
           </div>
       </div>

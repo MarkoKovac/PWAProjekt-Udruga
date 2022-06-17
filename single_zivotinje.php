@@ -1,5 +1,12 @@
-<?php include("path.php"); 
-      error_reporting(0);
+<?php 
+include("path.php");
+include(ROOT_PATH . '/app/controllers/animals.php');
+
+if(isset($_GET['id'])){
+  $animal = selectOne('animals',['id' => $_GET['id']]);
+}
+
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +26,18 @@
   <!--Header-->
   <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
-  
+  <div class="continer">
+    <div class="row m-0 my-5 justify-content-center">
+      <div class="col-12 col-md-5 p-0 d-flex justify-content-center">
+        <img src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>" alt="" class="w-75 animal-post-img">
+      </div>
+      <div class="col-12 col-md-5 p-3">
+        <h1><?php echo $animal['title']; ?></h1>
+        <p class="animal-spec"><?php echo "Vrsta: " . $animal['vrsta']."<br>"; echo "Spol: " . $animal['spol']."<br>"; echo "Velicina: " . $animal['velicina']."<br>";?></p>
+        <p><?php echo $animal['body']?></p>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>

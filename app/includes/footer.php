@@ -28,9 +28,7 @@ error_reporting(0);
       </div>
       <div class="m-4">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        Naš cilj i ključni dio naše misije je pomaganje životinjama od kojih drugi okreću glave jer su bolesne, teško udomljive ili stare (skupina na koju smo posebno slabi).
         </p>
         <ul class="list-inline mb-0 h5">
             <li class="list-inline-item">
@@ -58,7 +56,7 @@ error_reporting(0);
       </div>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © <?php echo date("Y"); ?> Copyright:
+      © <?php echo date("Y"); ?>
       <a class="text-black" href="index">LePas.com</a>
     </div>
     <button class="scrollToTopBtn"><i class="fa-solid fa-paw fa-2xl"></i></button>

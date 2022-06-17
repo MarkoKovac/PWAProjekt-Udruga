@@ -28,8 +28,7 @@ error_reporting(0);
       </div>
     </div>
   </div>
-  <div class="container">
-    <hr class="featurette-divider">
+  <div class="container my-5">
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">O Udruzi</h2>
@@ -59,7 +58,6 @@ error_reporting(0);
         <img src="assets/images/onama3.png" alt="" width="100%">
       </div>
     </div>
-    <hr class="featurette-divider">
   </div>
   <div class="container-fluid counter">
     <div class="container text-white fw-bold">

@@ -31,9 +31,9 @@ error_reporting(0);
   <div class="container-fluid p-0">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="100000">
-          <a href="https://bootstrapcreative.com/">
-            <picture>
+        <div class="carousel-item active" data-bs-interval="1000">
+          <a href="">
+            <picture style="filter: brightness(70%);">
               <source srcset="assets/images/carousel-image-1/1.png" media="(min-width: 1400px)">
               <source srcset="assets/images/carousel-image-1/2.png" media="(min-width: 769px)">
               <source srcset="assets/images/carousel-image-1/3.png" media="(min-width: 577px)">
@@ -41,16 +41,16 @@ error_reporting(0);
             </picture>
             <div class="carousel-caption justify-content-center align-items-center">
               <div>
-                <h2>Every project begins with a sketch</h2>
-                <p>We work as an extension of your business to explore solutions</p>
-                <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                <h2>Saznajte kako udomiti našeg LePasića.</h2>
+                <p>Ovdje možete saznati kako udomiti neku od životinja za koje brinemo</p>
+                <span class="btn carousel-button">Saznaj više</span>
               </div>
             </div>
           </a>
         </div>
         <div class="carousel-item">
-          <a href="https://bootstrapcreative.com/">
-            <picture>
+          <a href="/donacije">
+            <picture style="filter: brightness(70%);">
               <source srcset="assets/images/carousel-image-2/1.png" media="(min-width: 1400px)">
               <source srcset="assets/images/carousel-image-2/2.png" media="(min-width: 769px)">
               <source srcset="assets/images/carousel-image-2/3.png" media="(min-width: 577px)">
@@ -58,16 +58,16 @@ error_reporting(0);
             </picture>
             <div class="carousel-caption justify-content-center align-items-center">
               <div>
-                <h2>Every project begins with a sketch</h2>
-                <p>We work as an extension of your business to explore solutions</p>
-                <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                <h2>Postanite teta ili tetak čuvalica</h2>
+                <p>Saznajte kako nam pomoći čuvanjem naših zivotinja</p>
+                <span class="btn carousel-button">Saznaj više</span>
               </div>
             </div>
           </a>
         </div>
         <div class="carousel-item">
-          <a href="https://bootstrapcreative.com/">
-            <picture>
+          <a href="/udomi">
+            <picture style="filter: brightness(70%);">
               <source srcset="assets/images/carousel-image-3/1.png" media="(min-width: 1400px)">
               <source srcset="assets/images/carousel-image-3/2.png" media="(min-width: 769px)">
               <source srcset="assets/images/carousel-image-3/3.png" media="(min-width: 577px)">
@@ -75,9 +75,9 @@ error_reporting(0);
             </picture>
             <div class="carousel-caption justify-content-center align-items-center">
               <div>
-                <h2>Every project begins with a sketch</h2>
-                <p>We work as an extension of your business to explore solutions</p>
-                <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                <h2>Pomognite volovtiranjem ili donacijom</h2>
+                <p>Svaka pomoć je dobro došla i za svaku donaciju smo jako zahvalni</p>
+                <span class="btn carousel-button">Saznaj više</span>
               </div>
             </div>
           </a>
@@ -156,7 +156,7 @@ error_reporting(0);
           if ($i >= 4) break; ?>
 
           <div class="col-lg-3 col-6 pb-lg-0 pb-3">
-            <a href="#" class="card-link">
+            <a href="single_zivotinje.php?id=<?php echo $animal['id']?>" class="card-link">
               <div class="card card-visina1">
                 <img class="card-img-top1" src="<?php echo BASE_URL . '/assets/images/' . $animal['image']; ?>">
                 <div class="card-body">
@@ -183,7 +183,7 @@ error_reporting(0);
         if ($i >= 3) break; ?>
 
         <div class="col-lg-4 col-12 pb-lg-0 pb-3">
-          <a href="#" class="card-link">
+          <a href="single_postovi.php?id=<?php echo $post['id']?>" class="card-link">
             <div class="card card-visina2">
               <img class="card-img-top2" src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>">
               <div class="card-body">

@@ -54,7 +54,7 @@ error_reporting(0);
       <?php foreach (array_reverse($posts) as $key => $post) : ?>
 
         <div class="col-lg-4 col-12 pb-lg-4 pb-3">
-          <a href="#" class="card-link">
+          <a href="single_postovi.php?id=<?php echo $post['id']?>" class="card-link">
             <div class="card card-visina2">
               <img class="card-img-top2" src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>">
               <div class="card-body">

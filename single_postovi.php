@@ -1,5 +1,11 @@
-<?php include("path.php"); 
-      error_reporting(0);
+<?php 
+include("path.php"); 
+include(ROOT_PATH . '/app/controllers/posts.php');
+
+if(isset($_GET['id'])){
+  $post = selectOne('posts',['id' => $_GET['id']]);
+}
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +23,19 @@
 </head>
 <body>
   <!--Header-->
-  <?php include(ROOT_PATH  . "app/includes/header.php"); ?>
+  <?php include(ROOT_PATH  . "/app/includes/header.php"); ?>
 
-  
+  <div class="continer">
+    <div class="row m-0 my-5 justify-content-center">
+      <div class="col-12 col-md-5 p-0 d-flex justify-content-center">
+        <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" alt="" class="w-75 animal-post-img">
+      </div>
+      <div class="col-12 col-md-5 p-3">
+        <h1><?php echo $post['title']; ?></h1>
+        <p><?php echo $post['body']?></p>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>

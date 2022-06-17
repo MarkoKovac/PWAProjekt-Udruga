@@ -28,13 +28,11 @@ error_reporting(0);
     <div class="container">
       <div class="jumbotron">
         <h1>Donacije i volontiranje</h1>
-        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
+        <p>Ovdje možete saznati kako pomoći udruzi, postati teta čuvalica, uzeti životinju na privremeni smještaj ili nam pomoći sa šetnjom. Isto tako puno bi nam značilo ako bi mogli pomoći novčanom donacijom kako bi mogli razvijati udrugu i pomagati sve većoj količini životinja.</p>
       </div>
     </div>
   </div>
 
-  
   <div class="container p-5">
     <div class="row text-center">
     <div class="col-md-4 col-12">
@@ -80,31 +78,46 @@ error_reporting(0);
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">O Udruzi</h2>
-        <p class="lead">LePas je mlada udruga za dobrobit i zaštitu životinja koja je službeno s radom započela 11. rujna 2020. godine, no članovi udruge već su godinama aktivni i vrlo iskusni volonteri koji iza sebe imaju jako velik broj spašenih života i udomljenih životinja.</p>
+        <h2 class="featurette-heading">Donacije</h2>
+        <p class="lead">Kako biste pomogli njuškicama moguće je donirati različite stvari ili usluge.
+                        Osnovne potrepštine: deke, plahte, ručnici, upijajući podlošci, ogrlice, povodci, stari krevetići, stare igračke... (sve što vam više nije potrebno, ili se možda toga želite riješiti - našim njuškicama će dobro doći).
+                        Postanite teta/striček čuvalica (privremeni udomitelj).
+                        Donirajte hranu - posebno nam nedostaje starter klopice za štence i male mace (suhe i konzervice), te različite medicinske hrane za naše njuške u oporavku (gastrointenstinal, gastrointestinal low fat, renal…)
+                        Možete uskočiti s potrebnim prijevozima šapica od utočišta ili trenutne čuvalice do veterinara i natrag
+                        Izvršenje uplate na račun - odricanjem čak i jedne kave dnevno, pomažete u procesu njihovog spašavanja jer ćemo moći lakše pokriti različite veterinarke troškove 
+</p>
       </div>
       <div class="col-md-5 my-auto">
-        <img src="assets/images/onama1.png" alt="" width="100%">
+        <img src="assets/images/donacije1.png" alt="" width="100%">
       </div>
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Naši Članovi</span></h2>
-        <p class="lead">Trenutno u udruzi brojimo 4 aktivna člana, dok na skrbi imamo 80-ak pasa i mačaka. Većina ih se nalazi u našem utočištu, koje dijele s dvoje volontera, našom predsjednicom Tihanom te njenim zaručnikom Damirom.</p>
+        <h2 class="featurette-heading">Privremeni Smještaj</span></h2>
+        <p class="lead">Imate volju i vremena pomoći, ali niste sigurni kako biste to najbolje mogli?
+                        Jedan od izuzetno vrijednih oblika pomoći jest privremeno čuvanje, odnosno - postati teta ili striček čuvalica!
+                        Što to znači?
+                        Biti čuvalica znači primiti psa u svoj dom na oporovaka ili smještaj do njegovog udomljenja.
+                        Udruga za svo razdoblje čuvanja osigurava hranu i potrepštine za psa ili mačku te prijevoz do veterinara. Vi s druge strane osiguravate ljubav, pažnju i osnovni odgoj :)
+                        Kontakt forma u ovom dijelu za ljude koji žele čuvati:
+                        U formi da se traže podaci: ime, prezime, mail, kontakt, kakvog dosadašnjeg iskustva imaju sa psima/mačkama te forma za upload slika njihovog stambenog prostora, link za čuvalice</p>
       </div>
       <div class="col-md-5 order-md-1 my-auto">
-        <img src="assets/images/onama2.png" alt="" width="100%">
+        <img src="assets/images/donacije2.png" alt="" width="100%">
       </div>
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Cilj Udruge</h2>
-        <p class="lead">Naš cilj i ključni dio naše misije je pomaganje životinjama od kojih drugi okreću glave jer su bolesne, teško udomljive ili stare (skupina na koju smo posebno slabi). Zbog toga smo početkom 2021. godine, nakon što je dio Hrvatske pogodio jedan od najrazornijih potresa ikad zabilježenih, iz zahvaćenih područja preuzeli 94 psa među kojima je najveći postotak upravo ovih “neprimjetnih”.</p>
+        <h2 class="featurette-heading">Šetnje</h2>
+        <p class="lead">Imamo 50-ak pasa koje je potrebno išetavati i to svaki dan nekoliko puta.
+                        Ukoliko biste naš rad željeli podržati kroz šetnju naših šapica, rado ćemo vas ugostiti.
+                        Također, ukoliko ste se možda odlučili za udomljenje jedne od naših njuškica, ovo je odličan način da se bolje upoznate.
+                        Molimo vas da nas prije dolaska kontaktirate na mail udruge: udruga@lepas.hr</p>
       </div>
       <div class="col-md-5 my-auto">
-        <img src="assets/images/onama3.png" alt="" width="100%">
+        <img src="assets/images/donacije3.png" alt="" width="100%">
       </div>
     </div>
   </div>
